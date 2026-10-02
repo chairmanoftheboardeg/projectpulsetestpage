@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Project PULSE Prototype</title>
+  <meta name="description" content="Interactive demonstration of the proposed Project PULSE student wellbeing system. Fictional data only.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14213D">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+  <!-- Short branded loader (first open only) -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <img src="assets/img/pulse-mark.png" alt="" width="110" height="85">
+    <svg class="boot__ecg" viewBox="0 0 600 80" preserveAspectRatio="none"><path d="M0 40 H210 L228 40 L240 12 L254 70 L268 4 L282 62 L292 40 H600"/></svg>
+    <p>Starting the PULSE prototype</p>
+    <div class="boot__bar"><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <div id="app" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toasts" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <p style="padding:2rem;font-family:sans-serif">The Project PULSE prototype needs JavaScript turned on.</p>
+  </noscript>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/views-student.js"></script>
+  <script src="assets/js/views-counsellor.js"></script>
+  <script src="assets/js/views-ministry.js"></script>
+  <script>window.__PULSE.boot();</script>
+</body>
+</html>
